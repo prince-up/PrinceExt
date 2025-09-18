@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "PrinceExt - Your Productivity Hub",
+  "version": "1.0",
+  "description": "A customizable in-page hub to manage and launch your favorite websites.",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "launch_overlay": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Launch the PrinceExt overlay."
+    }
+  }
+}
