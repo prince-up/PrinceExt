@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "PrinceExt - Your Productivity Hub",
   "version": "1.0",
-  "description": "A customizable in-page hub to manage and launch your favorite websites.",
+  "description": "A customizable in-page hub, new tab, and desktop app to manage and launch your favorite websites.",
   "icons": {
     "16": "assets/icons/icon16.png",
     "48": "assets/icons/icon48.png",
@@ -12,7 +12,8 @@
     "storage",
     "activeTab",
     "tabs",
-    "scripting"
+    "scripting",
+    "windows"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -20,13 +21,23 @@
   "background": {
     "service_worker": "background.js"
   },
+  "chrome_url_overrides": {
+    "newtab": "hub.html"
+  },
   "commands": {
     "launch_overlay": {
       "suggested_key": {
         "default": "Ctrl+Shift+F",
         "mac": "Command+Shift+F"
       },
-      "description": "Launch the PrinceExt overlay."
+      "description": "Launch the PrinceExt overlay on the current page."
+    },
+    "launch_desktop_hub": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E", 
+        "mac": "Command+Shift+E"
+      },
+      "description": "Launch PrinceExt in a dedicated desktop window."
     }
   }
 }
