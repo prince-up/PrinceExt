@@ -22,7 +22,7 @@
     "service_worker": "background.js"
   },
   
-  // NOTE: 'chrome_url_overrides' block has been removed to restore normal Chrome startup behavior.
+  
   
   "commands": {
     "launch_overlay": {
