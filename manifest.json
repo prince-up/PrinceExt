@@ -13,7 +13,7 @@
     "activeTab",
     "tabs",
     "scripting",
-    "windows"
+    "windows"             
   ],
   "host_permissions": [
     "<all_urls>"
@@ -21,9 +21,9 @@
   "background": {
     "service_worker": "background.js"
   },
-  "chrome_url_overrides": {
-    "newtab": "hub.html"
-  },
+  
+  // NOTE: 'chrome_url_overrides' block has been removed to restore normal Chrome startup behavior.
+  
   "commands": {
     "launch_overlay": {
       "suggested_key": {
@@ -32,7 +32,7 @@
       },
       "description": "Launch the PrinceExt overlay on the current page."
     },
-    "launch_desktop_hub": {
+    "launch_desktop_hub": { 
       "suggested_key": {
         "default": "Ctrl+Shift+E", 
         "mac": "Command+Shift+E"
